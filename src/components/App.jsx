@@ -1,13 +1,12 @@
-import user from '../assets/user.json'
-import {Profile} from './Profile/Profile';
-
+import user from '../assets/user.json';
+import { Profile } from './Profile/Profile';
 
 function App() {
   return (
     <div>
-      <Profile user={user}/>
+      <Profile user={user} />
     </div>
   );
-};
+}
 
 export default App;
