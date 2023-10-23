@@ -1,33 +1,37 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import s from './Friends.module.css';
+import styles from './Friends.module.css';
 
-const FriendList = ({ friends }) => {
+const FriendListItem = ({ avatar, name, isOnline = false }) => {
   return (
-    <ul className={s.friendList}>
-      {friends.map((friend) => (
-        <FriendListItem
-          key={friend.id}
-          avatar={friend.avatar}
-          name={friend.name}
-          isOnline={friend.isOnline}
-        />
-      ))}
-    </ul>
-  );
-};
-
-const FriendListItem = ({ avatar, name, isOnline }) => {
-  return (
-    <li className={s.item}>
-      <span className={`status ${isOnline ? 'online' : 'offline'}`}></span>
-      <img className={s.avatar} src={avatar} alt="User avatar" width="48" />
-      <p className={s.name}>{name}</p>
+    <li className={styles.item}>
+      <span
+        className={`${styles.status}  ${
+          isOnline ? styles.online : styles.offline
+        }`}
+      ></span>
+      <img className={styles.avatar} src={avatar} alt={name} width="48" />
+      <p className={styles.name}>{name}</p>
     </li>
   );
 };
 
-
+export const FriendList = ({ friends }) => {
+  return (
+    <ul className={styles.friendList}>
+      {friends.map(friend => {
+        return (
+          <FriendListItem
+            key={friend.id}
+            isOnline={friend.isOnline}
+            avatar={friend.avatar}
+            name={friend.name}
+          />
+        );
+      })}
+    </ul>
+  );
+};
 
 FriendList.propTypes = {
   friends: PropTypes.arrayOf(

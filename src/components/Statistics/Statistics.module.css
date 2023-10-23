@@ -1,45 +1,47 @@
 .statistics {
-    text-align: center;
-    border: 1px solid #645d51;
-    border-radius: 5px;
-    background-color: #dee1e7;
-    margin: 40px;
-    transition: box-shadow ease 250ms;
+  background-color: #dee1e7;
+  border: 1px solid #645d51;
+  border-radius: 5px;
+  margin: 40px;
+  transition: box-shadow ease 250ms;
 }
 
 .title {
-    font-size: 24px;
-    margin: 10px 0;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #1d6c78;
-    padding: 20px;
+  font-size: 24px;
+  margin: 10px 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: #1d6c78;
+  padding: 20px;
 }
 
 .statList {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 .item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    flex: 1;
-    cursor: pointer;
-    transition: transform ease 250ms;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  padding: 10px;
+  flex: 1;
+  gap: 20px;
 }
 
 .label {
-    font-size: 16px;
-    font-weight: bold;
-    color: #000;
+  display: block;
+
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
 }
 
 .percentage {
-    font-size: 20px;
-    color: #04223f;
+  font-size: 20px;
 }
